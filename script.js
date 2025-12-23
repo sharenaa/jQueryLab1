@@ -1,35 +1,41 @@
 function hideAll() {
-  $(".plan").fadeOut(300);
+  // Smooth fade out
+  $(".plan").fadeOut(400);
 }
 
 $("#missionBtn").click(function(e) {
   e.preventDefault();
   hideAll();
 
-  //  colors for heading and style
-  $("#mission h1").text("Our Mission").css("color", "#89CE9A");
+  // Highlight button change text
+  $("#mission h1").css("color", "#89CE9A"); // Soft Green
 
-  $("#mission").delay(300).fadeIn(800);
+  // Fade in move 
+  $("#mission").delay(400).fadeIn(600);
 });
 
 $("#whyBtn").click(function(e) {
   e.preventDefault();
   hideAll();
 
-  $("#why h1").text("Why We Build").css("color", "#66AAEE");
+  $("#why h1").css("color", "#66AAEE"); // Soft Blue
 
-  $("#why").delay(300).slideDown(700);
+  // Slide down 
+  $("#why").delay(400).slideDown(600);
 });
 
 $("#advocacyBtn").click(function(e) {
   e.preventDefault();
   hideAll();
 
-  $("#advocacy h1").text("Advocacy in Action");
-  $("#advocacy h1").css({
-    "color": "#555",
-    "font-size": "36px"
-  });
+  $("#advocacy h1").css("color", "#333");
 
-  $("#advocacy").delay(300).fadeIn(600);
+  // Fade In
+  $("#advocacy").delay(400).fadeIn(800);
 });
+
+//  Image Hover Animation
+$(".modern-img").hover(
+    function() { $(this).css("transform", "scale(1.05)"); },
+    function() { $(this).css("transform", "scale(1)"); }
+);
