@@ -34,7 +34,7 @@ $("#advocacyBtn").click(function(e) {
   $("#advocacy").delay(400).fadeIn(800);
 });
 
-//  Image Hover Animation
+// Image Hover Animation
 $(".modern-img").hover(
     function() { $(this).css("transform", "scale(1.05)"); },
     function() { $(this).css("transform", "scale(1)"); }
